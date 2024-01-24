@@ -1,0 +1,21 @@
+server:
+  http:
+    addr: 0.0.0.0:8000
+    timeout: 1s
+  grpc:
+    addr: 0.0.0.0:9000
+    timeout: 1s
+  # JWT 配置
+  jwt:
+    realm: JWT # jwt 标识
+    secret: dfVpOK8LZeJLZHYmHdb1VdyRrACKpqoo # 服务端密钥
+    timeout: 24 # token 过期时间(小时)
+    max_refresh: 24 # token 更新时间(小时)
+data:
+  database:
+    driver: mysql
+    source: root:123@tcp(127.0.0.1:3306)/miam?parseTime=true
+  redis:
+    addr: 127.0.0.1:6379
+    read_timeout: 0.2s
+    write_timeout: 0.2s

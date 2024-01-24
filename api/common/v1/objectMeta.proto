@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+package common.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+
+option go_package = "miam-apiserver/api/common/v1;v1";
+option java_multiple_files = true;
+option java_package = "dev.kratos.api.common.v1";
+option java_outer_classname = "CommonProtoV1";
+
+message objectMeta{
+    uint64 id = 1;
+    string instanceID = 2;
+    string name = 3;
+    map<string,google.protobuf.Any> extend = 4;
+    google.protobuf.Timestamp createAt = 5;
+    google.protobuf.Timestamp updateAt = 6;
+}
+
+message requestReply {
+    int32 code = 1;
+    string reason = 2;
+    string message = 3;
+}
+
+message ListMeta {
+    int64 totalCount = 1;
+}

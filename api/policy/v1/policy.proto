@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package policy.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+import "common/v1/objectMeta.proto";
+
+option go_package = "miam-apiserver/api/policy/v1;v1";
+option java_multiple_files = true;
+option java_package = "dev.kratos.api.policy.v1";
+option java_outer_classname = "PolicyProtoV1";
+
+// The greeting service definition.
+service Policy {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {
+    option (google.api.http) = {
+      get: "/policy/{name}"
+    };
+  }
+  rpc Create (CreatePolicyRequest)returns (CreatePolicyReply){
+    option (google.api.http) = {
+        get: "/policy1/name"
+      };
+  }
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+
+message CreatePolicyRequest {
+    common.v1.objectMeta meta = 1;
+    string username = 2;
+}
+message CreatePolicyReply{
+    uint64 id = 1;
+    string instanceID = 2;
+    string name = 3;
+    map<string,google.protobuf.Any> extendShadow = 4;
+    google.protobuf.Timestamp createAt = 5;
+    google.protobuf.Timestamp updateAt = 6;
+}
+
+

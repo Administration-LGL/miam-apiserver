@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package user.v1;
+
+import "google/api/annotations.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+import "common/v1/objectMeta.proto";
+
+option go_package = "miam-apiserver/api/user/v1;v1";
+option java_multiple_files = true;
+option java_package = "dev.kratos.api.user.v1";
+option java_outer_classname = "UserProtoV1";
+
+// The greeting service definition.
+service User {
+  rpc Create (CreateUserRequest)returns (CreateUserReply){
+    option (google.api.http) = {
+        post: "/v1/user",
+        body: "*"
+      };
+  }
+
+  rpc Get (GetUserRequest)returns (UserReply){
+    option (google.api.http) = {
+        get: "/v1/user",
+      };
+  }
+}
+
+message GetUserRequest {
+    uint64 id = 1;
+    string nickname = 2;
+    string email = 3;
+    string phone = 4;
+    int32 status = 5;
+}
+
+message UserReply {
+    common.v1.objectMeta meta = 1;
+    int32 status = 2;
+    string nickname = 3;
+    string email = 4;
+    string phone = 5;
+    int32 is_admin = 6;
+    int64 total_policy = 7;
+    google.protobuf.Timestamp login_at = 8;
+}
+
+message CreateUserRequest {
+    common.v1.objectMeta meta = 1;
+    int32 status = 2;
+    string nickname = 3;
+    string password = 4;
+    string email = 5;
+    string phone = 6;
+    int32 is_admin = 7;
+    int64 total_policy = 8;
+    google.protobuf.Timestamp login_at = 9;
+}
+
+message CreateUserReply {
+    // 
+    uint64 id = 1;
+}
