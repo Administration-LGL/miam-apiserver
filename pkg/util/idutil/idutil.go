@@ -2,7 +2,7 @@ package idutil
 
 import (
 	"crypto/rand"
-	"miam-apiserver/pkg/util/stringutil"
+	"github.com/Administration-LGL/miam-apiserver/pkg/util/stringutil"
 
 	"github.com/speps/go-hashids"
 )

@@ -2,9 +2,9 @@ package service
 
 import (
 	"context"
-	secretv1 "miam-apiserver/api/secret/v1"
-	"miam-apiserver/internal/biz"
-	"miam-apiserver/internal/pkg/util"
+	secretv1 "github.com/Administration-LGL/miam-apiserver/api/secret/v1"
+	"github.com/Administration-LGL/miam-apiserver/internal/biz"
+	"github.com/Administration-LGL/miam-apiserver/internal/pkg/util"
 )
 
 // GreeterService is a greeter service.

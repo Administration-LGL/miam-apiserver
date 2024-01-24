@@ -3,7 +3,7 @@ package data
 import (
 	"context"
 	"errors"
-	"miam-apiserver/internal/biz"
+	"github.com/Administration-LGL/miam-apiserver/internal/biz"
 
 	"github.com/go-kratos/kratos/v2/log"
 )

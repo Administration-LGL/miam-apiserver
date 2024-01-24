@@ -1,13 +1,13 @@
 package server
 
 import (
-	authv1 "miam-apiserver/api/auth/v1"
-	policyv1 "miam-apiserver/api/policy/v1"
-	userv1 "miam-apiserver/api/user/v1"
-	"miam-apiserver/internal/conf"
-	"miam-apiserver/internal/service"
-	"miam-apiserver/middleware/auth/jwt"
-	secretv1 "miam-apiserver/api/secret/v1"
+	authv1 "github.com/Administration-LGL/miam-apiserver/api/auth/v1"
+	policyv1 "github.com/Administration-LGL/miam-apiserver/api/policy/v1"
+	userv1 "github.com/Administration-LGL/miam-apiserver/api/user/v1"
+	"github.com/Administration-LGL/miam-apiserver/internal/conf"
+	"github.com/Administration-LGL/miam-apiserver/internal/service"
+	"github.com/Administration-LGL/miam-apiserver/middleware/auth/jwt"
+	secretv1 "github.com/Administration-LGL/miam-apiserver/api/secret/v1"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/middleware/logging"

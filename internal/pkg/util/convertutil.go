@@ -1,11 +1,11 @@
 package util
 
 import (
-	v1 "miam-apiserver/api/common/v1"
-	secretpb "miam-apiserver/api/secret/v1"
-	userpb "miam-apiserver/api/user/v1"
+	v1 "github.com/Administration-LGL/miam-apiserver/api/common/v1"
+	secretpb "github.com/Administration-LGL/miam-apiserver/api/secret/v1"
+	userpb "github.com/Administration-LGL/miam-apiserver/api/user/v1"
 
-	"miam-apiserver/internal/biz"
+	"github.com/Administration-LGL/miam-apiserver/internal/biz"
 
 	"google.golang.org/protobuf/types/known/timestamppb"
 )

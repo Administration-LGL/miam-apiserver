@@ -3,10 +3,10 @@ package service
 import (
 	"context"
 
-	authpb "miam-apiserver/api/auth/v1"
-	userpb "miam-apiserver/api/user/v1"
-	"miam-apiserver/internal/biz"
-	"miam-apiserver/internal/pkg/util"
+	authpb "github.com/Administration-LGL/miam-apiserver/api/auth/v1"
+	userpb "github.com/Administration-LGL/miam-apiserver/api/user/v1"
+	"github.com/Administration-LGL/miam-apiserver/internal/biz"
+	"github.com/Administration-LGL/miam-apiserver/internal/pkg/util"
 
 	"github.com/go-kratos/kratos/v2/log"
 )

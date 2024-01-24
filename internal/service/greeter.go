@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	v1 "miam-apiserver/api/helloworld/v1"
-	"miam-apiserver/internal/biz"
+	v1 "github.com/Administration-LGL/miam-apiserver/api/helloworld/v1"
+	"github.com/Administration-LGL/miam-apiserver/internal/biz"
 )
 
 // GreeterService is a greeter service.

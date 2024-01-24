@@ -3,12 +3,12 @@ package biz
 import (
 	"context"
 	"errors"
-	"miam-apiserver/internal/conf"
-	"miam-apiserver/pkg/encrypt"
-	"miam-apiserver/pkg/util/idutil"
+	"github.com/Administration-LGL/miam-apiserver/internal/conf"
+	"github.com/Administration-LGL/miam-apiserver/pkg/encrypt"
+	"github.com/Administration-LGL/miam-apiserver/pkg/util/idutil"
 	"time"
 
-	mjwt "miam-apiserver/middleware/auth/jwt"
+	mjwt "github.com/Administration-LGL/miam-apiserver/middleware/auth/jwt"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/transport"

@@ -4,7 +4,7 @@ import (
 	"flag"
 	"os"
 
-	"miam-apiserver/internal/conf"
+	"github.com/Administration-LGL/miam-apiserver/internal/conf"
 
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/config"

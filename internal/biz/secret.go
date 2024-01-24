@@ -2,8 +2,8 @@ package biz
 
 import (
 	"context"
-	"miam-apiserver/middleware/auth/jwt"
-	"miam-apiserver/pkg/util/idutil"
+	"github.com/Administration-LGL/miam-apiserver/middleware/auth/jwt"
+	"github.com/Administration-LGL/miam-apiserver/pkg/util/idutil"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"gorm.io/gorm"

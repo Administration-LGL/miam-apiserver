@@ -7,7 +7,7 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/any.proto";
 import "common/v1/objectMeta.proto";
 
-option go_package = "miam-apiserver/api/user/v1;v1";
+option go_package = "github.com/Administration-LGL/miam-apiserver/api/user/v1;v1";
 option java_multiple_files = true;
 option java_package = "dev.kratos.api.user.v1";
 option java_outer_classname = "UserProtoV1";

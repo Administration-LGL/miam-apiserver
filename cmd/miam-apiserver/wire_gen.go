@@ -7,13 +7,13 @@
 package main
 
 import (
+	"github.com/Administration-LGL/miam-apiserver/internal/biz"
+	"github.com/Administration-LGL/miam-apiserver/internal/conf"
+	"github.com/Administration-LGL/miam-apiserver/internal/data"
+	"github.com/Administration-LGL/miam-apiserver/internal/server"
+	"github.com/Administration-LGL/miam-apiserver/internal/service"
 	"github.com/go-kratos/kratos/v2"
 	"github.com/go-kratos/kratos/v2/log"
-	"miam-apiserver/internal/biz"
-	"miam-apiserver/internal/conf"
-	"miam-apiserver/internal/data"
-	"miam-apiserver/internal/server"
-	"miam-apiserver/internal/service"
 )
 
 import (

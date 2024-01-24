@@ -1,8 +1,8 @@
 package data
 
 import (
-	"miam-apiserver/internal/biz"
-	"miam-apiserver/internal/conf"
+	"github.com/Administration-LGL/miam-apiserver/internal/biz"
+	"github.com/Administration-LGL/miam-apiserver/internal/conf"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/google/wire"

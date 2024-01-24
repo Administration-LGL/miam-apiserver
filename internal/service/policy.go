@@ -3,8 +3,8 @@ package service
 import (
 	"context"
 
-	pb "miam-apiserver/api/policy/v1"
-	"miam-apiserver/internal/biz"
+	pb "github.com/Administration-LGL/miam-apiserver/api/policy/v1"
+	"github.com/Administration-LGL/miam-apiserver/internal/biz"
 )
 
 type PolicyService struct {
