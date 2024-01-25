@@ -2,6 +2,7 @@ package biz
 
 import (
 	"context"
+
 	"github.com/Administration-LGL/miam-apiserver/middleware/auth/jwt"
 	"github.com/Administration-LGL/miam-apiserver/pkg/util/idutil"
 
@@ -70,10 +71,10 @@ func NewSecretUsecase(repo SecretRepo, logger log.Logger) *SecretUsecase {
 	return &SecretUsecase{repo: repo, log: log.NewHelper(logger)}
 }
 
-func (uc *SecretUsecase) List(ctx context.Context, opts ListOptions) (*SecretList, error) {
-	username, err := jwt.GetUsername(ctx)
-	if err != nil {
-		return &SecretList{}, err
+func (uc *SecretUsecase) List(ctx context.Context, username string, opts ListOptions) (list *SecretList, err error) {
+	name, err := jwt.GetUsername(ctx)
+	if err == nil {
+		username = name
 	}
 	return uc.repo.List(ctx, username, opts)
 }
